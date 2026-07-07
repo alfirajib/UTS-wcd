@@ -14,6 +14,7 @@
           <li><a href="#home">Beranda</a></li>
           <li><a href="#spesifikasi">Spesifikasi</a></li>
           <li><a href="#harga">Harga</a></li>
+          <li><a href="#booking">Test Drive</a></li>
         </ul>
       </nav>
     </header>
@@ -88,5 +89,87 @@
         <strong>Rp 2,5 - 3 Miliar</strong> tergantung tahun dan varian.
       </p>
     </section>
+
+    <section id="booking">
+      <h2>Booking Test Drive</h2>
+
+      <form id="bookingForm" novalidate>
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama lengkap"
+            required
+            minlength="3"
+          />
+          <small class="error-text" data-error-for="nama"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nama@email.com"
+            required
+          />
+          <small class="error-text" data-error-for="email"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="telepon">Nomor Telepon</label>
+          <input
+            type="tel"
+            id="telepon"
+            name="telepon"
+            placeholder="08xxxxxxxxxx"
+            pattern="[0-9]{10,13}"
+            required
+          />
+          <small class="error-text" data-error-for="telepon"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="varian">Varian BMW M4</label>
+          <select id="varian" name="varian" required>
+            <option value="">-- Pilih Varian --</option>
+            <option value="Competition">M4 Competition</option>
+            <option value="Competition xDrive">M4 Competition xDrive</option>
+            <option value="CSL">M4 CSL</option>
+          </select>
+          <small class="error-text" data-error-for="varian"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="tanggal">Tanggal Test Drive</label>
+          <input type="date" id="tanggal" name="tanggal" required />
+          <small class="error-text" data-error-for="tanggal"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan Tambahan (opsional)</label>
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="4"
+            placeholder="Tulis pertanyaan atau permintaan khusus..."
+          ></textarea>
+        </div>
+
+        <button type="submit">Kirim Booking</button>
+        <button type="button" id="resetForm" class="btn-secondary">
+          Reset Data
+        </button>
+      </form>
+
+      <p id="formStatus" class="form-status"></p>
+
+      <div id="bookingList" class="booking-list"></div>
+    </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
