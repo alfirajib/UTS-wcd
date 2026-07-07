@@ -1,109 +1,224 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:#0f172a;
-    color:white;
-    line-height:1.6;
+body {
+  background: #0f172a;
+  color: white;
+  line-height: 1.6;
 }
 
-header{
-    background:#111827;
-    padding:20px;
-    text-align:center;
+header {
+  background: #111827;
+  padding: 20px;
+  text-align: center;
 }
 
-header h1{
-    color:#3b82f6;
-    margin-bottom:15px;
+header h1 {
+  color: #3b82f6;
+  margin-bottom: 15px;
 }
 
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
-    gap:20px;
-    flex-wrap:wrap;
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-nav a{
-    text-decoration:none;
-    color:white;
-    background:#2563eb;
-    padding:10px 15px;
-    border-radius:8px;
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #2563eb;
+  padding: 10px 15px;
+  border-radius: 8px;
 }
 
-nav a:hover{
-    background:#1d4ed8;
+nav a:hover {
+  background: #1d4ed8;
 }
 
-.hero{
-    text-align:center;
-    padding:30px;
+.hero {
+  text-align: center;
+  padding: 30px;
 }
 
-.hero img{
-    width:100%;
-    max-width:900px;
-    border-radius:15px;
-    margin-bottom:20px;
+.hero img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 
-.hero h2{
-    color:#60a5fa;
-    margin-bottom:15px;
+.hero h2 {
+  color: #60a5fa;
+  margin-bottom: 15px;
 }
 
-section{
-    padding:30px;
+section {
+  padding: 30px;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-th{
-    background:#2563eb;
+th {
+  background: #2563eb;
 }
 
-th, td{
-    border:1px solid #475569;
-    padding:12px;
-    text-align:left;
+th,
+td {
+  border: 1px solid #475569;
+  padding: 12px;
+  text-align: left;
 }
 
-tr:nth-child(even){
-    background:#1e293b;
+tr:nth-child(even) {
+  background: #1e293b;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#111827;
-    margin-top:30px;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  margin-top: 30px;
+}
+
+/* FORM BOOKING */
+
+#booking {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#booking h2 {
+  color: #60a5fa;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #93c5fd;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #1e293b;
+  color: white;
+  font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group select:invalid {
+  border-color: #ef4444;
+}
+
+.error-text {
+  color: #f87171;
+  font-size: 13px;
+  min-height: 16px;
+  margin-top: 4px;
+}
+
+#bookingForm button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#bookingForm button[type="submit"] {
+  background: #2563eb;
+  color: white;
+}
+
+#bookingForm button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #475569;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #334155;
+}
+
+.form-status {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.form-status.success {
+  color: #4ade80;
+}
+
+.form-status.error {
+  color: #f87171;
+}
+
+.booking-list {
+  margin-top: 30px;
+}
+
+.booking-list h3 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.booking-list table {
+  font-size: 14px;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    nav ul{
-        flex-direction:column;
-        align-items:center;
-    }
+  .hero {
+    padding: 15px;
+  }
 
-    .hero{
-        padding:15px;
-    }
+  table {
+    font-size: 14px;
+  }
 
-    table{
-        font-size:14px;
-    }
+  #booking {
+    padding: 0 10px;
+  }
 }
